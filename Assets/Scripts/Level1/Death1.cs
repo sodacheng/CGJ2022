@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Death1 : MonoBehaviour
 {
@@ -11,8 +12,9 @@ public class Death1 : MonoBehaviour
         
         if (other.tag == "Player")
         {
-            //TODO 游戏失败
+            //游戏失败 重开
             Debug.Log("Death1");
+            SceneManager.LoadScene("Level1");
         }
     }
 }

@@ -1,11 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TrueWin1 : MonoBehaviour
 {
+    public GameObject NextLevelPanel;
+    private void Start()
+    {
+        
+    }
 
-    
     public void OnTriggerEnter(Collider other)
     {
         
@@ -15,9 +20,8 @@ public class TrueWin1 : MonoBehaviour
             Debug.Log("TrueWin1");
             print(Time.time);
             Destroy(other.gameObject);
-
-            //SceneManager.Instance.DelScene();
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Level3");
+            NextLevelPanel.SetActive(true);
+            print("弹出菜单");
         }
     }
 }
