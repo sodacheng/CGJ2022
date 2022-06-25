@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f707a9f5-dd4e-4bfc-ac51-f3413ae4d3af" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Level2/CylinderController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Level2/DeathArea.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Level2/FalseTarget.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CGJ2022/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CGJ2022/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level2/CylinderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level2/CylinderController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level2/DeathArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level2/DeathArea.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level2/DuckController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level2/DuckController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ProjectBase/Scenes/ScenesMgr.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +82,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656119392779</updated>
-      <workItem from="1656119401940" duration="15130000" />
+      <workItem from="1656119401940" duration="15368000" />
+      <workItem from="1656137776407" duration="3483000" />
     </task>
     <servers />
   </component>

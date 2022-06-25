@@ -10,6 +10,7 @@ public class DeathArea : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             //减血，跳到下一关
+            CylinderController.allowControl = false;
             Debug.Log("NextLevel,血量减一");
         }
     }
