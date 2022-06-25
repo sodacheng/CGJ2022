@@ -9,28 +9,33 @@ public class CylinderController : MonoBehaviour
     public float rotationAngle;
     //玩家控制的加速度变化速度
     public float angleAcculation;
-    //反向调整的手感比例
-    public float rate;
     // Start is called before the first frame update
     //控制玩家左右力的触发
     private bool isRight = false;
 
     private bool isLeft = false;
+    public static bool allowControl = true;
     void Start()
     {
+        rotationAngle = 1;
+        angleAcculation = 90;
         
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (allowControl)
         {
-            isLeft = true;
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            isRight = true;
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                isLeft = true;
+            }
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                isRight = true;
+            }
         }
     }
 

@@ -21,19 +21,20 @@ public class DuckController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        maxRotateSpeed = 6;
+        forwardSpeed = 1;
     }
     
     // Update is called once per frame
     void Update()
     {
-        
+        CheckUpDown();
     }
 
     private void FixedUpdate()
     {
         
-        CheckUpDown();
+        
         if (allowMove)
         {
             transform.position += Vector3.forward * forwardSpeed * Time.fixedDeltaTime;
@@ -59,12 +60,20 @@ public class DuckController : MonoBehaviour
                 {
                     rb = gameObject.AddComponent<Rigidbody>();
                 }
-                allowMove = false;
+                PlayerStop();
             }
             else 
             {
-                //进入真结局
+                transform.SetParent(cylinder.transform);
+                if (rb != null)
+                {
+                    rb = null;
+                }
+                rb = null;
+                //禁止控制,进入真结局
+                PlayerStop();
                 Debug.Log("进入Level2真结局");
+                
             }
         }
         else
@@ -73,8 +82,29 @@ public class DuckController : MonoBehaviour
             {
                 rb = null;
             }
-            rb = null;
-            
+
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Finish"))
+        {
+            transform.parent = null;
+            if (rb != null)
+            {
+                rb.freezeRotation = true;
+            }
+
+            PlayerStop();
+        }
+    }
+
+    void PlayerStop()
+    {
+        allowMove = false;
+        CylinderController.allowControl = false;
+        //不让圆柱动了
+        //cylinder.GetComponent<CylinderController>().rotationAngle = 0f;
     }
 }
