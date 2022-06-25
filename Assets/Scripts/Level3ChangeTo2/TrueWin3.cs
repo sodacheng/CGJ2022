@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class TrueWin3 : MonoBehaviour
 {
 
@@ -12,18 +14,28 @@ public class TrueWin3 : MonoBehaviour
     public float moveSpeed;
 
     public GameObject map; // 真结局会删除地图
-    public float timeCount; // 计时用变量
+    //public float timeCount; // 计时用变量
+    public float UITime; // 用于显示在UI上的时间
 
+    public Level2Panel Level2Panel;
+    public NextLevelPanel NextLevelPanel;
+
+    private void Awake()
+    {
+        UITime = 15;
+    }
 
     private void Update()
     {
-        timeCount += Time.deltaTime;
-        if (timeCount > 30f)
+        UITime -= Time.deltaTime;
+        if (UITime <-15)
         {
-            // TODO 当玩家没有离开出口,且坚持30秒时, 清空游戏地图,只留下玩家,触发真结局
             Destroy(map);
-            // Invoke(trueEnd,2);
+            Destroy(builder);
+            NextLevelPanel.gameObject.SetActive(true);
+            UITime = -15f;
         }
+        Level2Panel.UpdateText((int)UITime);
     }
 
     private void FixedUpdate()
@@ -33,18 +45,14 @@ public class TrueWin3 : MonoBehaviour
     
     
     /// <summary>
-    /// 玩家从出口离开, 普通胜利, 加一分.
+    /// 玩家从出口离开, 会重新开始游戏
     /// </summary>
     /// <param name="col"></param>
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "Player")
         {
-            Debug.Log("Win");
-            Destroy(col.gameObject);
-            Destroy(builder.gameObject);
-            
-            // 下一关
+            SceneManager.LoadScene("Level2");
         }
     }
 }
