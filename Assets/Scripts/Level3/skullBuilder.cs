@@ -7,9 +7,8 @@ using UnityEngine;
 /// </summary>
 public class skullBuilder : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public GameObject skull;
-    private float timeCount;
+    public GameObject skull; // 怪物预制体
+    private float timeCount; // 计时生成怪物
     void Start()
     {
         BuildSkull();
