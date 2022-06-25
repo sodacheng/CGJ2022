@@ -2,18 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 场景的控制刺旋转的脚本
+/// </summary>
 public class Spike : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public float rotateSpeed = 200f;
-    void Start()
-    {
-        
-    }
+    [Header("刺的旋转速度")] public float rotateSpeed = 200f;
 
-    // Update is called once per frame
     void Update()
     {
-        this.transform.Rotate(Vector3.up * (Time.deltaTime*rotateSpeed));
+        this.transform.Rotate(Vector3.up * (Time.deltaTime * rotateSpeed));
     }
 }

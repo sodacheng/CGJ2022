@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Level3控制玩家移动的脚本
+/// </summary>
 public class PlayerController : MonoBehaviour
 {
     [Header("移动速度")]
@@ -16,13 +19,7 @@ public class PlayerController : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    // Update 将输入转换为移动输入
     void Update()
     {
         nowPos.x = this.transform.position.x;
@@ -31,6 +28,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    // 通过MovePosition()移动
     private void FixedUpdate()
     {
         rb.MovePosition(nowPos += inputDir*(moveSpeed*Time.fixedDeltaTime));

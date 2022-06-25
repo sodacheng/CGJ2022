@@ -4,15 +4,18 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
+/// <summary>
+/// Level3控制怪物行动的脚本
+/// </summary>
 public class skullController : MonoBehaviour
 {
     public Transform target; // 玩家
 
-    public Vector3 moveDir;
+    public Vector3 moveDir; // 移动方向(怪物只会单纯的直线移动)
 
     public float moveSpeed;
     
-    public GameObject builder;
+    public GameObject builder; // 怪物建造者
     
     private void Awake()
     {
@@ -44,17 +47,10 @@ public class skullController : MonoBehaviour
             Debug.Log("Death");
             Destroy(col.gameObject);
             Destroy(this.gameObject);
+            
             //TODO 玩家死亡
+            
             Destroy(builder.gameObject);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.transform.name == "block")
-        {
-            Destroy(col.gameObject);
-            print("Destroy");
         }
     }
 }
