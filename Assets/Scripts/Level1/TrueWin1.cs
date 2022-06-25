@@ -4,17 +4,7 @@ using UnityEngine;
 
 public class TrueWin1 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
     public void OnTriggerEnter(Collider other)
     {
@@ -25,6 +15,9 @@ public class TrueWin1 : MonoBehaviour
             Debug.Log("TrueWin1");
             print(Time.time);
             Destroy(other.gameObject);
+
+            //SceneManager.Instance.DelScene();
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Level3");
         }
     }
 }
