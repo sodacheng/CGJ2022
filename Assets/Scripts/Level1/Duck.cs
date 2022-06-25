@@ -8,26 +8,45 @@ using UnityEngine.Serialization;
 public class Duck : MonoBehaviour
 {
     private Rigidbody rb;
-    [SerializeField] private float jumpForce = 30f;
+    public float jumpForce = 30f;
     private bool isJump = false;
+    public bool isFly = false;
+
+    private float timeC;
     private void Awake()
     {
         rb = this.GetComponent<Rigidbody>();
     }
 
 
+    private void Start()
+    {
+        print(Time.time);
+    }
+
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             isJump = true;
-            Debug.Log("Jump");
+            //Debug.Log("Jump");
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            timeC += Time.deltaTime;
+            
         }
         else
         {
-            isJump = false;
+            timeC = 0;
+        }
+
+        if (timeC >= 2f)
+        {
+            isFly = true;
         }
     }
 
@@ -36,6 +55,17 @@ public class Duck : MonoBehaviour
         if (isJump)
         {
             rb.AddForce(Vector3.up * jumpForce);
+            isJump = false;
+        }
+        // else
+        // {
+        //     rb.AddForce(Vector3.down * 10);
+        // }
+
+
+        if (isFly)
+        {
+            rb.AddForce(Vector3.up * 1000f);
         }
     }
 }

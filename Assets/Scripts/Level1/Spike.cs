@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ring : MonoBehaviour
+public class Spike : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 10f;
     // Start is called before the first frame update
+    public float rotateSpeed = 200f;
     void Start()
     {
-        Destroy(this.gameObject,3f);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.transform.Translate(transform.right * (-1 * moveSpeed * Time.deltaTime));
+        this.transform.Rotate(Vector3.up * (Time.deltaTime*rotateSpeed));
     }
 }

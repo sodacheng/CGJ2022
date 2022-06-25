@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrueWin1 : MonoBehaviour
+public class SpeedUp : MonoBehaviour
 {
+    public Duck player;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +22,8 @@ public class TrueWin1 : MonoBehaviour
         
         if (other.tag == "Player")
         {
-            //TODO 游戏Trick结局
-            Debug.Log("TrueWin1");
-            print(Time.time);
-            Destroy(other.gameObject);
+            //直接飞出去
+            player.jumpForce *= 20;
         }
     }
 }
