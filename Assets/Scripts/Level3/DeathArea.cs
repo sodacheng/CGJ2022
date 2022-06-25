@@ -10,8 +10,6 @@ public class DeathArea : MonoBehaviour
             CylinderController.allowControl = false;
             //Restart
             SceneManager.LoadScene("Level3");
-
-
         }
     }
 

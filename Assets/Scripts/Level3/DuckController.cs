@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class DuckController : MonoBehaviour
 {
+    public NextLevelPanel nextLevelPanel;
+    
     //初始化获取的组件
    private Rigidbody rb;
 
@@ -74,7 +76,7 @@ public class DuckController : MonoBehaviour
                 //禁止控制,进入真结局
                 PlayerStop();
                 Debug.Log("进入Level2真结局");
-                
+                nextLevelPanel.gameObject.SetActive(true);
                 
             }
         }
