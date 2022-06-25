@@ -20,7 +20,7 @@ public class CylinderController : MonoBehaviour
         rotationAngle = 1;
         angleAcculation = 90;
         
-
+        allowControl = true;
     }
 
     // Update is called once per frame

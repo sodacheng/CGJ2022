@@ -1,7 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathArea : MonoBehaviour
 {
@@ -9,9 +7,11 @@ public class DeathArea : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            //减血，跳到下一关
             CylinderController.allowControl = false;
-            Debug.Log("NextLevel,血量减一");
+            //Restart
+            SceneManager.LoadScene("Level3");
+
+
         }
     }
 

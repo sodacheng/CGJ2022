@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DuckController : MonoBehaviour
 {
@@ -42,8 +43,8 @@ public class DuckController : MonoBehaviour
 
         if (transform.position.z > 4.3f)
         {
-            //进入下一关卡
-            Debug.Log("NextLevel");
+            //Restart
+            SceneManager.LoadScene("Level3");
         }
         
     }
@@ -73,6 +74,7 @@ public class DuckController : MonoBehaviour
                 //禁止控制,进入真结局
                 PlayerStop();
                 Debug.Log("进入Level2真结局");
+                
                 
             }
         }
