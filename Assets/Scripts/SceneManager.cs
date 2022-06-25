@@ -32,6 +32,7 @@ public class SceneManager : MonoBehaviour
 
     /// <summary>
     /// 通关时调用该方法,得分加一,并加载新关卡
+    /// Win调用此方法
     /// </summary>
     public void NewScene()
     {
@@ -47,6 +48,7 @@ public class SceneManager : MonoBehaviour
 
     /// <summary>
     /// 调用该方法时,删除当前关卡,如果还有关卡,则进入下一关,如果没有关卡了, 则游戏结束.
+    ///  TrueEnd调用此方法
     /// </summary>
     public void DelScene()
     {
