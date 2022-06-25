@@ -23,6 +23,7 @@ public class Win1 : MonoBehaviour
         {
             //TODO 游戏胜利 +1分 切换场景
             Debug.Log("Win1");
+            SceneManager.Instance.NewScene();
         }
     }
 }
