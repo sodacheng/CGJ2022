@@ -18,6 +18,8 @@ public class DuckController : MonoBehaviour
     private bool allowMove = true;
     //控制duck移动的系数
     public float forwardSpeed = 1;
+    //真结局标识bool
+    private bool isTrue;
 
 
 
@@ -26,6 +28,8 @@ public class DuckController : MonoBehaviour
     {
         maxRotateSpeed = 6;
         forwardSpeed = 1;
+        isTrue = false;
+        allowMove = true;
     }
     
     // Update is called once per frame
@@ -74,9 +78,17 @@ public class DuckController : MonoBehaviour
                 }
                 rb = null;
                 //禁止控制,进入真结局
-                PlayerStop();
-                Debug.Log("进入Level2真结局");
-                nextLevelPanel.gameObject.SetActive(true);
+                //这个标识让进入真结局只执行一次
+                if (!isTrue)
+                {
+                    isTrue = true;
+                    PlayerStop();
+                    Debug.Log("进入Level2真结局");
+                    nextLevelPanel.gameObject.SetActive(true);
+                }
+                
+                
+                
                 
             }
         }
