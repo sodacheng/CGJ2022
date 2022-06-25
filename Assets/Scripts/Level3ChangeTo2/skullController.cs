@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Level3控制怪物行动的脚本
@@ -51,6 +52,7 @@ public class skullController : MonoBehaviour
             //TODO 玩家死亡
             
             Destroy(builder.gameObject);
+            SceneManager.LoadScene("Level2");
         }
     }
 }
