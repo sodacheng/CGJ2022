@@ -8,9 +8,11 @@ public class skullController : MonoBehaviour
 {
     public Transform target; // 玩家
 
-    public Vector2 moveDir;
+    public Vector3 moveDir;
 
     public float moveSpeed;
+    
+    public GameObject builder;
     
     private void Awake()
     {
@@ -24,6 +26,7 @@ public class skullController : MonoBehaviour
         tempDir = tempDir.normalized;
         moveDir.x = tempDir.x;
         moveDir.y = tempDir.y;
+        moveDir.z = 0;
         Destroy(this.gameObject,3f);
     }
 
@@ -36,12 +39,22 @@ public class skullController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         // 碰到玩家
-        if (col.tag == "Player")
+        if (col.CompareTag("Player"))
         {
             Debug.Log("Death");
             Destroy(col.gameObject);
             Destroy(this.gameObject);
             //TODO 玩家死亡
+            Destroy(builder.gameObject);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.transform.name == "block")
+        {
+            Destroy(col.gameObject);
+            print("Destroy");
         }
     }
 }
