@@ -39,6 +39,8 @@ public class SceneManager : MonoBehaviour
         score++;
         
         // TODO 更新UI分数显示
+        UIManager.Instance.GetPanel<ScenePanel>().UpdateScore(score); // 失败时更新生命同理
+        
         
         int count = sceneList.Count;
         int temp = Random.Range(1, count + 1);
