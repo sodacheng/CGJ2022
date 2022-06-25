@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f707a9f5-dd4e-4bfc-ac51-f3413ae4d3af" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Level1/ScoreArea.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Level1/ScoreArea.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Level1/UI/Lesson1Panel.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CGJ2022/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CGJ2022/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level2.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level2.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level2/CylinderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level2/CylinderController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level2/CylinderController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level2/CylinderController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level2/DeathArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level2/DeathArea.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level2/DeathArea.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level2/DeathArea.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level2/DuckController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level2/DuckController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level2/DuckController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level2/DuckController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FireRing.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FireRing.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +17,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level1/Ring.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level1/RingBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level1/ScoreArea.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level1/SpeedUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level1/Spike.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level1/UI/NextLevelPanel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -97,6 +93,7 @@
       <workItem from="1656119401940" duration="15130000" />
       <workItem from="1656144639211" duration="592000" />
       <workItem from="1656145257115" duration="244000" />
+      <workItem from="1656151869321" duration="781000" />
     </task>
     <servers />
   </component>
