@@ -801,7 +801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cylinder: {fileID: 1733115722}
-  maxRotateSpeed: 20
+  maxRotateSpeed: 4.6
   forwardSpeed: 1
 --- !u!136 &1376098548
 CapsuleCollider:
@@ -1008,7 +1008,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationAngle: 1
   angleAcculation: 30
-  rate: 1
 --- !u!4 &1733115722
 Transform:
   m_ObjectHideFlags: 0
