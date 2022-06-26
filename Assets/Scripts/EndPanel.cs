@@ -23,7 +23,7 @@ public class EndPanel : MonoBehaviour
         quitBtn.onClick.AddListener(() =>
         {
             noticText.gameObject.SetActive(true);
-            Application.Quit();
+            //Application.Quit();
         });
     }
 }
